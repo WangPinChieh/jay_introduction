@@ -4,7 +4,7 @@ import parse from 'html-react-parser'
 
 ReactDOM.render(
     <div className='full-height container'>
-        <div id={'intro'} className='full-height' style={{'background-color': 'coral'}}>
+        <div id={'intro'} className='full-height background-image'>
             test
         </div>
         <div id={'experience'} className='full-height' style={{'background-color': 'yellow'}}></div>
