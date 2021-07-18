@@ -1,11 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const CarouselTypes = {
+    Text: 'Text',
+    Image: 'Image',
+}
+
 class CarouselTextBlock extends React.Component {
     render() {
         return (
             <div>
                 <h1>Another example headline.</h1>
+            </div>
+        );
+    }
+}
+
+class CarouselImageBlock extends React.Component {
+    render() {
+        return (
+            <div>
+                <img src={this.props.imageSrc} className="responsive"></img>
             </div>
         );
     }
@@ -24,15 +39,26 @@ class CarouselItem extends React.Component {
                 <div className="carousel-caption">
                     <div className="flex">
                         <div className="full">
-                            <CarouselTextBlock/>
+                            {this.renderBlock(this.props.leftBlock)}
                         </div>
                         <div className="full">
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
+                            {this.renderBlock(this.props.rightBlock)}
                         </div>
                     </div>
                 </div>
             </div>
         );
+    }
+
+    renderBlock(data) {
+        switch (data.type) {
+            case CarouselTypes.Text:
+                return <CarouselTextBlock />;
+            case CarouselTypes.Image:
+                return <CarouselImageBlock imageSrc={data.imageSrc}/>;
+        }
+
+        return <CarouselTextBlock/>;
     }
 }
 
@@ -64,7 +90,8 @@ class IntroductionPage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <CarouselItem/>
+                    <CarouselItem leftBlock={{type: CarouselTypes.Image, imageSrc: '../images/jay_photo.jpg'}}
+                                  rightBlock={{type: CarouselTypes.Text}}/>
                     <div className="carousel-item">
                         <svg className="bd-placeholder-img" width="100%" height="100%"
                              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
