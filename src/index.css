@@ -1,0 +1,19 @@
+.jay_photo {
+
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+.full {
+    height: 100%;
+    width: 100%;
+}
