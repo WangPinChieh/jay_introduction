@@ -1,6 +1,7 @@
 .jay_photo {
 
 }
+
 html, body {
     height: 100%;
     margin: 0;
@@ -13,11 +14,77 @@ html, body {
 .flex {
     display: flex;
 }
+
 .full {
     height: 100%;
     width: 100%;
 }
+
 .responsive {
     width: 100%;
     height: auto;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.name:after {
+    content: '  —';
+}
+
+.name:before {
+    content: '—  ';
+}
+
+body {
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+#navbar {
+    overflow: hidden;
+}
+
+#navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0.23);
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    bottom: 0;
+    right: 2rem;
+    width: 3rem;
+}
+
+.sticky + .content {
+    padding-top: 60px;
 }
