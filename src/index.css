@@ -82,7 +82,9 @@ body {
 }
 
 .content {
-    padding: 16px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
 }
 
 .sticky {
@@ -94,4 +96,87 @@ body {
 
 .sticky + .content {
     padding-top: 60px;
+}
+
+.introImg {
+    border-radius: 20%;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin-left: 25%;
+    margin-top: 25%;
+}
+
+
+#intro_1 {
+    font-size: 2rem;
+    margin-top: 20%;
+    color: white;
+}
+
+#intro_2 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+#intro_2:before {
+    content: '— ';
+}
+
+#intro_2:after {
+    content: ' —';
+}
+
+#intro_3 {
+    font-size: 2rem;
+    color: white;
+}
+
+.sessionHeader {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.sessionHeader:before {
+    content: '— ';
+}
+
+.sessionHeader:after {
+    content: ' —';
+}
+
+@media screen and (max-width: 600px) {
+    .flex {
+        display: block;
+    }
+
+    .introImg {
+        border-radius: 19%;
+        width: 49%;
+        height: auto;
+        max-width: 399px;
+        margin-left: 24%;
+        margin-top: 24%;
+    }
+
+    #intro_1 {
+        font-size: 1rem;
+        color: white;
+    }
+
+    #intro_2 {
+        font-size: 1rem;
+        color: white;
+        font-weight: bold;
+    }
+
+    #intro_3 {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .content {
+        line-height: 1rem;
+    }
 }
